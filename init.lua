@@ -23,7 +23,10 @@ require("lazy").setup({
 			lazy = false,
 			priority = 1000,
 			config = function()
-				require("bamboo").setup({})
+				require("bamboo").setup{
+					style = 'multiplex',
+					transparent = true
+				}
 				require("bamboo").load()
 			end,
 		},
@@ -50,6 +53,9 @@ require("lazy").setup({
 
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls" },
+	ensure_installed = { "lua_ls", "clangd", "asm_lsp" },
 })
-require("lspconfig").lua_ls.setup({})
+local lspconfig = require("lspconfig")
+lspconfig.lua_ls.setup {}
+lspconfig.asm_lsp.setup{}
+lspconfig.clagd.setup{}

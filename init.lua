@@ -58,4 +58,4 @@ require("mason-lspconfig").setup({
 local lspconfig = require("lspconfig")
 lspconfig.lua_ls.setup {}
 lspconfig.asm_lsp.setup{}
-lspconfig.clagd.setup{}
+lspconfig.clangd.setup{}

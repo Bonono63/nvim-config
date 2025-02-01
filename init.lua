@@ -53,9 +53,8 @@ require("lazy").setup({
 
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "clangd", "asm_lsp" },
+	ensure_installed = { "lua_ls", "clangd" },
 })
 local lspconfig = require("lspconfig")
 lspconfig.lua_ls.setup {}
-lspconfig.asm_lsp.setup{}
 lspconfig.clangd.setup{}

@@ -53,8 +53,9 @@ require("lazy").setup({
 
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "clangd" },
+	ensure_installed = { "lua_ls", "clangd", "zls" },
 })
 local lspconfig = require("lspconfig")
 lspconfig.lua_ls.setup {}
+lspconfig.zls.setup{}
 lspconfig.clangd.setup{}
